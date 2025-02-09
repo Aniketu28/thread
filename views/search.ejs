@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search.Threads</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div
+        class="w-[100%] h-screen bg-[#0a0a0a] xl:px-[20px] xl:pt-[20px] lg:px-[20px] lg:pt-[20px] md:px-[20px] md:pt-[20px] px-[0px] pt-[18px] flex justify-center items-center">
+        <!-- sidebar -->
+        <div
+            class="w-[3%] h-[100%] xl:flex lg:flex md:flex hidden flex-col justify-between items-center px-[10px] pt-[25px] pb-[30px]">
+            <div>
+                <svg aria-label="Threads" class="x1ypdohk x13dflua x11xpdln xk4oym4 xus2keu" fill="#ffff" height="34px"
+                    role="img" viewBox="0 0 192 192" width="34px" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z">
+                    </path>
+                </svg>
+            </div>
+            <div class="flex flex-col justify-center items-center gap-8">
+                <svg id="home" aria-label="Home" role="img" viewBox="0 0 24 24" class="" style="height:26px; width: 26px;">
+                    <title>Home</title>
+                    <path
+                        d="M2.25 12.8855V20.7497C2.25 21.8543 3.14543 22.7497 4.25 22.7497H8.25C8.52614 22.7497 8.75 22.5259 8.75 22.2497V17.6822V17.4997C8.75 15.1525 10.6528 13.2497 13 13.2497C15.3472 13.2497 17.25 15.1525 17.25 17.4997V17.6822V22.2497C17.25 22.5259 17.4739 22.7497 17.75 22.7497H21.75C22.8546 22.7497 23.75 21.8543 23.75 20.7497V12.8855C23.75 11.3765 23.0685 9.94815 21.8954 8.99883L16.1454 4.3454C14.3112 2.86095 11.6888 2.86095 9.85455 4.3454L4.10455 8.99883C2.93153 9.94815 2.25 11.3765 2.25 12.8855Z"
+                        fill="#484949" stroke="#484949" stroke-linecap="round" stroke-width="2.5"></path>
+                </svg>
+                <svg id="searchbtn" aria-label="Search" role="img" viewBox="0 0 26 26" style="height: 26px; width: 26px;">
+                    <title>Search</title>
+                    <path clip-rule="evenodd"
+                        d="M3.5 11.5C3.5 7.08172 7.08172 3.5 11.5 3.5C15.9183 3.5 19.5 7.08172 19.5 11.5C19.5 15.9183 15.9183 19.5 11.5 19.5C7.08172 19.5 3.5 15.9183 3.5 11.5ZM11.5 1C5.70101 1 1 5.70101 1 11.5C1 17.299 5.70101 22 11.5 22C13.949 22 16.2023 21.1615 17.9883 19.756L22.3661 24.1339C22.8543 24.622 23.6457 24.622 24.1339 24.1339C24.622 23.6457 24.622 22.8543 24.1339 22.3661L19.756 17.9883C21.1615 16.2023 22 13.949 22 11.5C22 5.70101 17.299 1 11.5 1Z"
+                        fill="#ffff" fill-rule="evenodd"></path>
+                </svg>
+                <svg id="create" aria-label="Create" role="img" viewBox="0 0 26 26"
+                    class="x1lliihq x135i0dr x2lah0s x1f5funs x1n2onr6 x1bl4301 x3egl4o"
+                    style="fill: transparent; height: 26px; width: 26px;">
+                    <title>Create</title>
+                    <path
+                        d="M22.75 13L22.75 13.15C22.75 16.5103 22.75 18.1905 22.096 19.4739C21.5208 20.6029 20.6029 21.5208 19.4739 22.096C18.1905 22.75 16.5103 22.75 13.15 22.75L12.85 22.75C9.48969 22.75 7.80953 22.75 6.52606 22.096C5.39708 21.5208 4.4792 20.6029 3.90396 19.4739C3.25 18.1905 3.25 16.5103 3.25 13.15L3.25 12.85C3.25 9.48968 3.25 7.80953 3.90396 6.52606C4.4792 5.39708 5.39708 4.4792 6.52606 3.90396C7.80953 3.25 9.48968 3.25 12.85 3.25L13 3.25"
+                        stroke="#484949" stroke-linecap="round" stroke-width="2.5"></path>
+                    <path d="M21.75 4.25L13.75 12.25" stroke="#484949" stroke-linecap="round" stroke-width="2.5">
+                    </path>
+                </svg>
+                <svg id="Notifications" aria-label="Notifications" role="img" viewBox="0 0 32 32"
+                    style="fill: transparent; height: 30px; width: 30px;">
+                    <title>Notifications</title>
+                    <path
+                        d="M5.5 12.8568C5.5 17.224 9.22178 21.5299 15.0332 25.2032C15.3554 25.397 15.7401 25.5909 16 25.5909C16.2703 25.5909 16.655 25.397 16.9668 25.2032C22.7782 21.5299 26.5 17.224 26.5 12.8568C26.5 9.11212 23.8698 6.5 20.4599 6.5C18.4847 6.5 16.9356 7.39792 16 8.74479C15.0851 7.40812 13.5257 6.5 11.5401 6.5C8.14059 6.5 5.5 9.11212 5.5 12.8568Z"
+                        stroke="#484949" stroke-width="2.5"></path>
+                </svg>
+                <svg id="profile" aria-label="Profile" role="img" viewBox="0 0 26 26"
+                    style="fill: transparent; height: 26px; width: 26px;">
+                    <title>Profile</title>
+                    <circle cx="13" cy="7.25" r="4" stroke="#484949" stroke-width="2.5"></circle>
+                    <path
+                        d="M6.26678 23.75H19.744C21.603 23.75 22.5 23.2186 22.5 22.0673C22.5 19.3712 18.8038 15.75 13 15.75C7.19625 15.75 3.5 19.3712 3.5 22.0673C3.5 23.2186 4.39704 23.75 6.26678 23.75Z"
+                        stroke="#484949" stroke-width="2.5"></path>
+                </svg>
+            </div>
+            <div>
+                <svg aria-label="More" role="img" viewBox="0 0 24 24" style="height: 26px; width: 26px;" id="Weblogout">
+                    <title>logout</title>
+                    <rect x="3" y="7" width="18" height="3" rx="1.25" fill="#484949"></rect>
+                    <rect x="3" y="15" width="12" height="3" rx="1.25" fill="#484949"></rect>
+                </svg>
+            </div>
+        </div>
+        <!-- main -->
+        <div
+            class="w-[97%] h-[100%] xl:flex lg:flex md:flex hidden flex-col justify-center items-start gap-5 pt-[25px]">
+            <div class="w-[700px] mx-auto flex justify-center items-center gap-5">
+                <h5 class="text-[16px] text-white font-semibold">Search Profiles</h5>
+                <div class="p-1 bg-white rounded-full">
+                    <svg aria-label="More" role="img" viewBox="0 0 13 12" style="height: 12px; width: 12px;">
+                        <title>More</title>
+                        <path d="m2.5 4.2 4 4 4-4" fill="none" stroke="#484949" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="1.5"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- scroll screen -->
+            <div class="xl:w-[650px] lg:w-[600px] md:w-[600px]  h-[100%] overscrolled border-[1px] border-t-[#484949] border-r-[#484949] 
+              border-b-transparent border-l-[#484949] mx-auto bg-[#171717] px-[20px] rounded11">
+                <div class="py-[8px] px-[24px] mt-5 bg-black flex justify-start items-center border-[1px] border-[#484949] rounded12
+                  ">
+                    <form class="w-[100%] flex justify-between items-center" action="/search" method="post">
+                        <input class="w-[85%] pt-[7px] pb-[3px] outline-none bg-transparent text-white text-[16px] 
+                        placeholder:text-[#777777] placeholder:text-[16px] placeholder:font-light " type="text"
+                            placeholder="search" name="query" id="search" required>
+                        <button class="w-[15%] hidden py-[6px] bg-transparent rounded-lg text-white font-semibold text-[16px]
+                         border-[1px] border-[#484949]" type="submit">search</button>
+                    </form>
+                </div>
+
+                <!--all users -->
+                <h5 class="text-[16px] text-[#777] font-semibold mt-4 mb-4 ps-[5px] py-[6px]">Follow suggestions</h5>
+                <% searchResult.forEach((user) => { %>
+                    <div class="w-[100%] py-[10px] px-[05px] bg-transparent flex justify-start items-start border-[1px] border-b-transparent
+                    border-l-transparent border-r-transparent border-t-transparent">
+                           <div class="w-[10%]">
+                               <img class="w-[36px] h-[36px] rounded-full" src="<%= user.profile %>" alt="Profile">
+                           </div>
+                           <div class="w-[90%] flex flex-col justify-start items-start">
+                               <div class="flex flex-col justify-start items-start">
+                                   <h5 class="text-[14px] text-white font-semibold">@<%= user.username %></h5>
+                                   <h5 class="text-[13px] text-white font-semibold"><%= user.name %></h5>
+                               </div>
+                           </div>
+                       </div>
+                 <% }) %>                 
+            </div>
+        </div>
+        <!-- mobile layout -->
+        <div class="xl:hidden lg:hidden md:hidden w-full h-[100%] flex flex-col justify-start items-center pt-[10px]">
+            <div class="w-[100%] px-[20px] mb-[10px] flex justify-between items-center">
+                <div>
+                    <svg aria-label="Threads" class="x1ypdohk x13dflua x11xpdln xk4oym4 xus2keu" fill="#ffff"
+                        height="32px" role="img" viewBox="0 0 192 192" width="32px" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="flex justify-center items-center gap-5">
+                    <h5 class="text-[16px] text-white font-semibold">Search Profiles</h5>
+                    <div class="p-1 bg-white rounded-full">
+                        <svg aria-label="More" role="img" viewBox="0 0 13 12" style="height: 12px; width: 12px;">
+                            <title>More</title>
+                            <path d="m2.5 4.2 4 4 4-4" fill="none" stroke="#484949" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="1.5"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <svg aria-label="More" role="img" viewBox="0 0 24 24" style="height: 36px; width: 36px;"
+                        id="moblogout">
+                        <title>logout</title>
+                        <rect x="0" y="7" width="18" height="2" rx="1.0" fill="#484949"></rect>
+                        <rect x="6" y="14" width="12" height="2" rx="1.0" fill="#484949"></rect>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- mobile scroll screen -->
+            <div class="xl:w-[700px] lg:w-[650px] md:w-[600px] w-[100%] h-[100%] overscrolled border-[1px] mt-[10px] border-t-[#0a0a0a] border-r-[#0a0a0a] 
+              border-b-transparent border-l-[#0a0a0a] mx-auto bg-[#0a0a0a] xl:px-[20px] lg:px-[20px] md:px-[20px] px-[20px]">
+                <div class="py-[8px] px-[24px] mt-2 bg-black flex justify-start items-center border-[1px] border-[#484949] rounded12
+                ">
+                  <form class="w-[100%] flex justify-between items-center" action="/search" method="post">
+                      <input class="w-[85%] pt-[7px] pb-[3px] outline-none bg-transparent text-white text-[16px] 
+                      placeholder:text-[#777777] placeholder:text-[16px] placeholder:font-light " type="text"
+                          placeholder="search" name="query" id="search" required>
+                      <button class="w-[15%] hidden py-[6px] bg-transparent rounded-lg text-white font-semibold text-[16px]
+                       border-[1px] border-[#484949]" type="submit">search</button>
+                  </form>
+              </div>
+
+                <!-- mobile all users -->
+                <h5 class="text-[16px] text-[#777] font-semibold mt-4 ps-[5px] py-[6px] mb-2">Follow suggestions</h5>
+                <% searchResult.forEach((user) => { %>
+                    <div class="w-[100%] py-[12px] bg-transparent flex justify-start items-start border-[1px] border-b-transparent
+                border-l-transparent border-r-transparent border-t-transparent gap-3">
+                       <div class="flex justify-start items-center">
+                           <img class="w-[34px] h-[34px] rounded-full" src="<%= user.profile %>" alt="Profile">
+                       </div>
+                       <div class="flex flex-col justify-start items-start">
+                           <div class="flex flex-col justify-start items-start">
+                               <h5 class="text-[13px] text-white font-semibold">@<%= user.username %> </h5>
+                               <h5 class="text-[12px] text-white font-semibold"><%= user.name %></h5>
+                           </div>
+                       </div>
+                   </div>
+                    <% }) %> 
+            </div>
+            <!-- mobile menu -->
+            <div class="w-[100%] bg-[#101010d9] px-[25px] py-[20px]">
+                <div class="flex justify-between items-center">
+                    <svg id="mobhome" aria-label="Home" role="img" viewBox="0 0 24 24" class="" style="height:28px; width: 28px;">
+                        <title>Home</title>
+                        <path
+                            d="M2.25 12.8855V20.7497C2.25 21.8543 3.14543 22.7497 4.25 22.7497H8.25C8.52614 22.7497 8.75 22.5259 8.75 22.2497V17.6822V17.4997C8.75 15.1525 10.6528 13.2497 13 13.2497C15.3472 13.2497 17.25 15.1525 17.25 17.4997V17.6822V22.2497C17.25 22.5259 17.4739 22.7497 17.75 22.7497H21.75C22.8546 22.7497 23.75 21.8543 23.75 20.7497V12.8855C23.75 11.3765 23.0685 9.94815 21.8954 8.99883L16.1454 4.3454C14.3112 2.86095 11.6888 2.86095 9.85455 4.3454L4.10455 8.99883C2.93153 9.94815 2.25 11.3765 2.25 12.8855Z"
+                            fill="#484949" stroke="#484949" stroke-linecap="round" stroke-width="2.5"></path>
+                    </svg>
+                    <svg id="mobsearchbtn" aria-label="Search" role="img" viewBox="0 0 26 26" style="height: 28px; width: 28px;">
+                        <title>Search</title>
+                        <path clip-rule="evenodd"
+                            d="M3.5 11.5C3.5 7.08172 7.08172 3.5 11.5 3.5C15.9183 3.5 19.5 7.08172 19.5 11.5C19.5 15.9183 15.9183 19.5 11.5 19.5C7.08172 19.5 3.5 15.9183 3.5 11.5ZM11.5 1C5.70101 1 1 5.70101 1 11.5C1 17.299 5.70101 22 11.5 22C13.949 22 16.2023 21.1615 17.9883 19.756L22.3661 24.1339C22.8543 24.622 23.6457 24.622 24.1339 24.1339C24.622 23.6457 24.622 22.8543 24.1339 22.3661L19.756 17.9883C21.1615 16.2023 22 13.949 22 11.5C22 5.70101 17.299 1 11.5 1Z"
+                            fill="#ffff" fill-rule="evenodd"></path>
+                    </svg>
+                    <svg id="mobcreate" aria-label="Create" role="img" viewBox="0 0 26 26"
+                        style="fill: transparent; height: 28px; width: 28px;">
+                        <title>Create</title>
+                        <path
+                            d="M22.75 13L22.75 13.15C22.75 16.5103 22.75 18.1905 22.096 19.4739C21.5208 20.6029 20.6029 21.5208 19.4739 22.096C18.1905 22.75 16.5103 22.75 13.15 22.75L12.85 22.75C9.48969 22.75 7.80953 22.75 6.52606 22.096C5.39708 21.5208 4.4792 20.6029 3.90396 19.4739C3.25 18.1905 3.25 16.5103 3.25 13.15L3.25 12.85C3.25 9.48968 3.25 7.80953 3.90396 6.52606C4.4792 5.39708 5.39708 4.4792 6.52606 3.90396C7.80953 3.25 9.48968 3.25 12.85 3.25L13 3.25"
+                            stroke="#484949" stroke-linecap="round" stroke-width="2.5"></path>
+                        <path d="M21.75 4.25L13.75 12.25" stroke="#484949" stroke-linecap="round" stroke-width="2.5">
+                        </path>
+                    </svg>
+                    <svg id="mobNotifications" aria-label="Notifications" role="img" viewBox="0 0 32 32"
+                        style="fill: transparent; height: 32px; width: 32px;">
+                        <title>Notifications</title>
+                        <path
+                            d="M5.5 12.8568C5.5 17.224 9.22178 21.5299 15.0332 25.2032C15.3554 25.397 15.7401 25.5909 16 25.5909C16.2703 25.5909 16.655 25.397 16.9668 25.2032C22.7782 21.5299 26.5 17.224 26.5 12.8568C26.5 9.11212 23.8698 6.5 20.4599 6.5C18.4847 6.5 16.9356 7.39792 16 8.74479C15.0851 7.40812 13.5257 6.5 11.5401 6.5C8.14059 6.5 5.5 9.11212 5.5 12.8568Z"
+                            stroke="#484949" stroke-width="2.5"></path>
+                    </svg>
+                    <svg id="mobprofile" aria-label="Profile" role="img" viewBox="0 0 26 26"
+                        style="fill: transparent; height: 28px; width: 28px;">
+                        <title>Profile</title>
+                        <circle cx="13" cy="7.25" r="4" stroke="#484949" stroke-width="2.5"></circle>
+                        <path
+                            d="M6.26678 23.75H19.744C21.603 23.75 22.5 23.2186 22.5 22.0673C22.5 19.3712 18.8038 15.75 13 15.75C7.19625 15.75 3.5 19.3712 3.5 22.0673C3.5 23.2186 4.39704 23.75 6.26678 23.75Z"
+                            stroke="#484949" stroke-width="2.5"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("Weblogout").addEventListener("click", (e) => {
+            window.location.href = "/logout";
+        });
+        document.getElementById("moblogout").addEventListener("click", (e) => {
+            window.location.href = "/logout";
+        });
+        document.getElementById("search").addEventListener("change",(e)=>{
+            let param = e.target.value;
+        });
+        document.getElementById("home").addEventListener("click",()=>{
+            window.location.href="/";
+        });
+        document.getElementById("create").addEventListener("click",()=>{
+            window.location.href="/create";
+        });
+        document.getElementById("Notifications").addEventListener("click",()=>{
+            window.location.href="/Notifications";
+        });
+        document.getElementById("profile").addEventListener("click",()=>{
+            window.location.href="/profile";
+        });
+        document.getElementById("mobhome").addEventListener("click",()=>{
+            window.location.href="/";
+        });
+        document.getElementById("mobcreate").addEventListener("click",()=>{
+            window.location.href="/create";
+        });
+        document.getElementById("mobNotifications").addEventListener("click",()=>{
+            window.location.href="/Notifications";
+        });
+        document.getElementById("mobprofile").addEventListener("click",()=>{
+            window.location.href="/profile";
+        });
+    </script>
+</body>
+
+</html>
